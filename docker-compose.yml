@@ -1,8 +1,7 @@
 version: "3"
 services:
   headscale-webui:
-    build:
-     context: /path/to/git/repo/root/headscale-webui/
+    image: ghcr.io/anjomro/headscale-webui:v0.1.0
     container_name: headscale-webui
     environment:
       - TZ=UTC                                 # Timezone
