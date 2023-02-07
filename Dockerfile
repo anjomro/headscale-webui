@@ -16,4 +16,5 @@ VOLUME /headscale
 VOLUME /data
 
 EXPOSE 5000/tcp
-CMD ["python","/app/server.py"]
+
+CMD ["uwsgi","--http", "0.0.0.0:5000", "--master", "-p", "4", "-w", "server:app"]
